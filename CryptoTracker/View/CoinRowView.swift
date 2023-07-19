@@ -1,5 +1,5 @@
 //
-//  CoinView.swift
+//  CoinRowView.swift
 //  CryptoTracker
 //
 //  Created by mai nguyen on 7/19/23.
@@ -7,43 +7,52 @@
 
 import SwiftUI
 
-struct CoinView: View {
+struct CoinRowView: View {
     var body: some View {
-        HStack(spacing: 10){
+        HStack{
             Text("1")
-                .font(.callout)
+                .font(.caption)
                 .padding(.trailing,2)
                 .foregroundColor(.gray)
+            
             Image("ethereum-logo")
                 .resizable()
-                .frame(width: 36,height: 36)
+                .scaledToFit()
+                .frame(width: 32,height: 32)
                 .clipShape(Circle())
                 
             
-            VStack(alignment: .leading){
+            VStack(alignment: .leading,spacing: 4){
                 Text("Ethereum")
-                    .font(.headline)
-                    .fontWeight(.bold)
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
+                    .padding(.leading,4)
+                
                 Text("ETH")
-                    .font(.callout)
+                    .font(.caption)
+                    .padding(.leading,6)
+
             }
+            .padding(.leading,2)
+             
             Spacer()
             
-            VStack(alignment: .trailing){
+            VStack(alignment: .trailing,spacing: 4){
                 Text("$1900")
                     .font(.headline)
                     .fontWeight(.bold)
                 Text("+2.3%")
-                    .font(.callout)
+                    .font(.caption)
                     .foregroundColor(.red)
             }
         }
+        .padding(.vertical,4)
         .frame(maxWidth: .infinity)
     }
 }
 
-struct CoinView_Previews: PreviewProvider {
+struct CoinRowView_Previews: PreviewProvider {
     static var previews: some View {
-        CoinView()
+        CoinRowView()
     }
 }
