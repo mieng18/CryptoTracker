@@ -11,6 +11,10 @@ import UIKit
 class HomeViewModel: ObservableObject {
     
     
+    init(){
+        fetchCoinData()
+    }
+    
     func fetchCoinData() {
         let urlString = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=24h&locale=en"
         
@@ -29,7 +33,11 @@ class HomeViewModel: ObservableObject {
             
             guard let data = data else {return}
             print("DEBUG: Data \(data)")
+            
+            let dataString = String(data: data, encoding: .utf8)
+            print("DEBUG: Data\(dataString)")
         }
+        .resume()
     }
     
 }
