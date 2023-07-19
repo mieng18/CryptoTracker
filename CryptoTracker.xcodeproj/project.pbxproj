@@ -22,6 +22,7 @@
 		CA5598652A685DE60046A63A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5598642A685DE60046A63A /* HomeViewModel.swift */; };
 		CA5598672A6861070046A63A /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5598662A6861070046A63A /* Coin.swift */; };
 		CA55986A2A6891E00046A63A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CA5598692A6891E00046A63A /* Kingfisher */; };
+		CA55986D2A6896E60046A63A /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA55986C2A6896E60046A63A /* Double+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		CA5598622A6853830046A63A /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
 		CA5598642A685DE60046A63A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CA5598662A6861070046A63A /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		CA55986C2A6896E60046A63A /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				CA5598572A684A030046A63A /* View */,
 				CA55982D2A6849FA0046A63A /* CryptoTrackerApp.swift */,
 				CA55982F2A6849FA0046A63A /* ContentView.swift */,
+				CA55986B2A6896CC0046A63A /* Extensions */,
 				CA5598312A6849FC0046A63A /* Assets.xcassets */,
 				CA5598332A6849FC0046A63A /* Preview Content */,
 			);
@@ -172,6 +175,14 @@
 				CA5598662A6861070046A63A /* Coin.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CA55986B2A6896CC0046A63A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CA55986C2A6896E60046A63A /* Double+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +325,7 @@
 				CA55985D2A684C8D0046A63A /* TopMoversView.swift in Sources */,
 				CA5598612A68532F0046A63A /* AllCoinsView.swift in Sources */,
 				CA5598632A6853830046A63A /* CoinRowView.swift in Sources */,
+				CA55986D2A6896E60046A63A /* Double+Extensions.swift in Sources */,
 				CA5598652A685DE60046A63A /* HomeViewModel.swift in Sources */,
 				CA55985B2A684BD50046A63A /* HomeView.swift in Sources */,
 				CA5598302A6849FA0046A63A /* ContentView.swift in Sources */,
