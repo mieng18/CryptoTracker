@@ -5,11 +5,11 @@
 //  Created by mai nguyen on 7/19/23.
 //
 
-import Foundation
-import UIKit
+import SwiftUI
 
 class HomeViewModel: ObservableObject {
-    
+    @Published var coins = [Coin]()
+    @Published var topMovingCoin = [Coin]()
     
     init(){
         fetchCoinData()
@@ -32,12 +32,27 @@ class HomeViewModel: ObservableObject {
             }
             
             guard let data = data else {return}
-            print("DEBUG: Data \(data)")
             
-            let dataString = String(data: data, encoding: .utf8)
-            print("DEBUG: Data\(dataString)")
+            do {
+                let coins = try JSONDecoder().decode([Coin].self, from: data)
+                DispatchQueue.main.async {
+                    self.coins = coins
+                    self.configureTopMovingCoins()
+                }
+                print(("DEBBUG: Coins \(coins)"))
+                
+            } catch let error {
+                print("DEBUG: Failed to decode with error \(error.localizedDescription)")
+                
+            }
+            
         }
         .resume()
+    }
+    
+    func configureTopMovingCoins() {
+        let topMovers = coins.sorted(by:{$0.priceChangePercentage24H > $1.priceChangePercentage24H})
+        self.topMovingCoin = Array(topMovers.prefix(5))
     }
     
 }

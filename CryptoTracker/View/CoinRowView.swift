@@ -6,16 +6,18 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct CoinRowView: View {
+    let coin: Coin
     var body: some View {
         HStack{
-            Text("1")
+            Text("\(coin.marketCapRank ?? 1)")
                 .font(.caption)
                 .padding(.trailing,2)
                 .foregroundColor(.gray)
             
-            Image("ethereum-logo")
+            KFImage(URL(string: coin.image))
                 .resizable()
                 .scaledToFit()
                 .frame(width: 32,height: 32)
@@ -23,12 +25,12 @@ struct CoinRowView: View {
                 
             
             VStack(alignment: .leading,spacing: 4){
-                Text("Ethereum")
+                Text(coin.name)
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .padding(.leading,4)
                 
-                Text("ETH")
+                Text(coin.symbol)
                     .font(.caption)
                     .padding(.leading,6)
 
@@ -38,10 +40,10 @@ struct CoinRowView: View {
             Spacer()
             
             VStack(alignment: .trailing,spacing: 4){
-                Text("$1900")
+                Text("\(coin.currentPrice)")
                     .font(.headline)
                     .fontWeight(.bold)
-                Text("+2.3%")
+                Text("\(coin.priceChangePercentage24H)")
                     .font(.caption)
                     .foregroundColor(.red)
             }
@@ -51,8 +53,8 @@ struct CoinRowView: View {
     }
 }
 
-struct CoinRowView_Previews: PreviewProvider {
-    static var previews: some View {
-        CoinRowView()
-    }
-}
+//struct CoinRowView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CoinRowView(coin: <#Coin#>)
+//    }
+//}
