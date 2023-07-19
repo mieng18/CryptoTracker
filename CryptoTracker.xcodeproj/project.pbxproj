@@ -19,6 +19,7 @@
 		CA55985F2A684CA40046A63A /* TopMoversItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA55985E2A684CA40046A63A /* TopMoversItemView.swift */; };
 		CA5598612A68532F0046A63A /* AllCoinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5598602A68532F0046A63A /* AllCoinsView.swift */; };
 		CA5598632A6853830046A63A /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5598622A6853830046A63A /* CoinRowView.swift */; };
+		CA5598652A685DE60046A63A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5598642A685DE60046A63A /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		CA55985E2A684CA40046A63A /* TopMoversItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoversItemView.swift; sourceTree = "<group>"; };
 		CA5598602A68532F0046A63A /* AllCoinsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCoinsView.swift; sourceTree = "<group>"; };
 		CA5598622A6853830046A63A /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
+		CA5598642A685DE60046A63A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 		CA5598582A684A080046A63A /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				CA5598642A685DE60046A63A /* HomeViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				CA55985D2A684C8D0046A63A /* TopMoversView.swift in Sources */,
 				CA5598612A68532F0046A63A /* AllCoinsView.swift in Sources */,
 				CA5598632A6853830046A63A /* CoinRowView.swift in Sources */,
+				CA5598652A685DE60046A63A /* HomeViewModel.swift in Sources */,
 				CA55985B2A684BD50046A63A /* HomeView.swift in Sources */,
 				CA5598302A6849FA0046A63A /* ContentView.swift in Sources */,
 				CA55982E2A6849FA0046A63A /* CryptoTrackerApp.swift in Sources */,
