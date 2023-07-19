@@ -9,7 +9,8 @@ import SwiftUI
 
 struct AllCoinsView: View {
     var body: some View {
-        VStack(spacing: 0){
+        VStack(alignment: .leading, spacing: 0){
+            
             VStack(spacing: 12){
                 Text("All Coins")
                     .font(.headline)
@@ -17,23 +18,20 @@ struct AllCoinsView: View {
                     .frame(maxWidth: .infinity,alignment: .leading)
                 HStack{
                     Text("Coins")
-                        .font(.subheadline)
-                        .fontWeight(.medium)
-                        .foregroundColor(.gray)
                     Spacer()
                     
                     Text("Price")
-                        .font(.subheadline)
-                        .fontWeight(.medium)
-                        .foregroundColor(.gray)
                 }
+                .font(.caption)
+                .fontWeight(.medium)
+                .foregroundColor(.gray)
             }
             .padding(.horizontal)
+            
             ScrollView(.vertical) {
                 VStack{
-                   
                     ForEach(0...10,id: \.self){_ in
-                        CoinView()
+                        CoinRowView()
 
                     }
                 }
