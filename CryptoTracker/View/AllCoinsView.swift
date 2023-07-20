@@ -9,6 +9,8 @@ import SwiftUI
 
 struct AllCoinsView: View {
     @StateObject var viewModel = HomeViewModel()
+    @State private var showAlert = false
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 0){
             
@@ -30,11 +32,19 @@ struct AllCoinsView: View {
             .padding(.horizontal)
             
             ScrollView(.vertical) {
-                VStack{
+                LazyVStack{
                     ForEach(viewModel.coins){ coin in
                         CoinRowView(coin: coin)
-
                     }
+                }
+                .onReceive(viewModel.$error, perform: { error in
+                    if error != nil {
+                        showAlert.toggle()
+                    }
+                })
+                .alert(isPresented: $showAlert){
+                    Alert(title: Text("Error"),
+                          message: Text(viewModel.error?.localizedDescription ?? ""))
                 }
                 .padding()
             }
