@@ -17,7 +17,6 @@ enum CoinError: Error,LocalizedError {
     
     var errorDescription: String?{
         switch self {
-            
         case .invalidURL:
             return "The URL was invalid, please try again later"
         case .serverError:
